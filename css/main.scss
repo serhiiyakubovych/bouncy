@@ -166,6 +166,16 @@ a {
 }
 .page_navigation {
   padding: 40px 0;
+  @include transition(all .3s);
+  &.fixed_navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0;
+    width: 100%;
+    background: rgba(25, 189, 154, 1);
+  }
   .custom_navbar_toggle {
     font-size: 1.3em;
   }
@@ -180,7 +190,7 @@ a {
     color: #fff;
     @include transition(color .3s ease-in-out);
     &:hover {
-      color: #cacf72;
+      color: #ffda3a;
     }
   }
   .menu {
@@ -711,9 +721,8 @@ a {
 /* SUBSCRIBE SECTION */
 .subscribe {
   padding-bottom: 100px;
-  background: #292929 url(../images/subscribe-bg.jpg) no-repeat center;
+  background: #292929 url(../images/subscribe-bg.jpg) no-repeat fixed center;
   @include bg-size(cover);
-  background-attachment: fixed;
   .section_title {
     color: #fff;
   }
@@ -820,7 +829,6 @@ a {
     }
   }
 }
-
 
 /* PAGE FOOTER */
 .page_footer {

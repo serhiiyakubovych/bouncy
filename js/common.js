@@ -3,9 +3,12 @@
 
     /**
      * Singleton of the site
+     *
+     * @param {object} options
      * @constructor
      */
-    function Bouncy() {
+    function Bouncy(options = {}) {
+        let BOUNCY_MENU = options.menuElem || $(".page_navigation");
 
         /**
          * The main method (add handlers, call work functions etc.)
@@ -16,6 +19,14 @@
             * <!-- EVENTS
             * */
 
+            $(document).on("scroll", {
+                menuElem: BOUNCY_MENU
+            }, togglePosStateOfNavMenu);
+
+            $(document).on("scroll", {
+                menuElem: BOUNCY_MENU
+            }, checkCurrPagePosForNavMenu);
+
             // Scroll after main menu anchor clicking
             $(document).on("click", ".page_nav_anchor", scrollToPageSection);
             // Scroll after banner button clicking
@@ -23,7 +34,7 @@
                 destination: "#about"
             }, scrollToPageSection);
 
-
+            // Toggle video state
             $(document).on("click", "video", toggleVideo);
 
             /*
@@ -57,20 +68,88 @@
         }
 
         /**
-         * Set true values for progress bars,
-         * take these values from their attribute 'data-progress'
+         * Check a current position on the site and update an active link of a navigation menu
          *
-         * @param {HTMLElement[]} progressBars
-         * @param {string} startColor
-         * @param {string} endColor
+         * @param {object} event
          */
-        function setGradientForProgressBars(progressBars, startColor, endColor) {
-            progressBars.filter("[data-progress]").each( (index, progressBar) => {
-                let progress = parseFloat(progressBar.dataset.progress);
-                $(progressBar).css(`background`,
-                    `linear-gradient(to right, ${startColor}, ${startColor} ${progress}%,
-                                               ${endColor} ${progress + 0.1}%, ${endColor})`);
+        function checkCurrPagePosForNavMenu(event) {
+            event.data = event.data || {};
+            let menu = event.data.menuElem;
+            if (!menu) {
+                return;
+            }
+
+            let menuLinkElems = $(menu).find(".page_nav_anchor"),
+                oldActiveLi = $(menuLinkElems).parent().filter(".active"),
+                newActiveLi,
+                pageSections = $("*").filter("[id]"),
+                offsetYPage = $(window).scrollTop() + 50;
+
+            for (let i = 0; i < pageSections.length; i++) {
+                let section = $(pageSections)[i];
+                if ( $(section).offset().top > offsetYPage ) {
+                    return;
+                }
+                for (let j = 0; j < menuLinkElems.length; j++) {
+                    let linkElem = $(menuLinkElems)[j],
+                        anchor = ("" + $(linkElem).prop("href").match(/#.*/)).slice(1);
+                    if ( $(section).prop("id") !== anchor ) {
+                        continue;
+                    }
+
+                    $(oldActiveLi).removeClass("active");
+                    oldActiveLi = newActiveLi = $(linkElem).parent();
+                    $(newActiveLi).addClass("active");
+                }
+            }
+        }
+
+        /**
+         * Toggle fixed/static position state of navigation menu after page scrolling
+         *
+         * @param {object} event
+         */
+        function togglePosStateOfNavMenu(event) {
+            event.data = event.data || {};
+            let menuElem = event.data.menuElem;
+            if (!menuElem) {
+                return;
+            }
+
+            $(menuElem).removeClass("fixed_navigation");
+            if ( $(window).scrollTop() >  $(menuElem).offset().top ) {
+                $(menuElem).addClass("fixed_navigation");
+            }
+        }
+
+        /**
+         * Page scrolling after clicking on a navigation link
+         *
+         * @param {object} event
+         */
+        function scrollToPageSection(event) {
+            event.preventDefault();
+            event.data = event.data || {};
+
+            let href = $(this).prop("href") || "",
+                linkMatch = href.match(/#.*/),
+                link = (linkMatch && linkMatch[0].length > 1) ? linkMatch[0] : "body",
+                newPath = (link === "body") ? "" : link.slice(1),
+                destination = event.data.destination || $(link),
+                offset = $(destination).offset();
+
+            $('html, body').animate({
+                scrollTop: offset.top - 10,
+                scrollLeft: offset.left
             });
+
+            $(this).blur();
+
+            checkCurrPagePosForNavMenu({
+                menuElem: BOUNCY_MENU
+            });
+
+            window.history.pushState({}, "", newPath);
         }
 
         /**
@@ -94,33 +173,27 @@
         }
 
         /**
-         * Page scrolling after clicking on a navigation link
+         * Set true values for progress bars,
+         * take these values from their attribute 'data-progress'
          *
-         * @param {object} event
+         * @param {HTMLElement[]} progressBars
+         * @param {string} startColor
+         * @param {string} endColor
          */
-        function scrollToPageSection(event) {
-            event.preventDefault();
-            event.data = event.data || {};
-
-            let href = $(this).prop("href") || "",
-                linkMatch = href.match(/#.*/),
-                link = (linkMatch && linkMatch[0].length > 1) ? linkMatch[0] : "body",
-                destination = event.data.destination || $(link),
-                offset = $(destination).offset();
-
-            $('html, body').animate({
-                scrollTop: offset.top,
-                scrollLeft: offset.left
+        function setGradientForProgressBars(progressBars, startColor, endColor) {
+            progressBars.filter("[data-progress]").each( (index, progressBar) => {
+                let progress = parseFloat(progressBar.dataset.progress);
+                $(progressBar).css(`background`,
+                    `linear-gradient(to right, ${startColor}, ${startColor} ${progress}%,
+                                               ${endColor} ${progress + 0.1}%, ${endColor})`);
             });
-
-            $(this).blur();
         }
 
         this.initPage = initPage;
     }
 
     /**
-     * Add Google map using Google Maps API
+     * Add Google map on the site using Google Maps API
      *
      * @param mapElem
      */
