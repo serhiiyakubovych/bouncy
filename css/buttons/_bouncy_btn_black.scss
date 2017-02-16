@@ -1,0 +1,8 @@
+.bouncy_btn_black {
+  border-color: $page-second-text-color;
+  color: $page-second-text-color;
+  &:hover {
+    background: $page-second-text-color;
+    color: #fff;
+  }
+}

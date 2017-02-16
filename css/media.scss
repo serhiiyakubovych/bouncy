@@ -1,11 +1,13 @@
 @import 'mixins';
 
 @media screen and (max-width: 320px) {}
+
 @media screen and (max-width: 480px) {
   .main_header .page_welcome .to_bottom_arrow {
     bottom: 5%;
   }
 }
+
 @media screen and (max-width: 640px) {
   .about {
     text-align: center;

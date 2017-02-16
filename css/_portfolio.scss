@@ -1,0 +1,116 @@
+.portfolio {
+  padding-bottom: 100px;
+  background: #f3f3f3;
+  text-align: center;
+  .portfolio_navigation {
+    display: inline-block;
+    margin-bottom: 60px;
+    border-bottom: none;
+    li {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 0;
+        background: $active-color;
+      }
+      &.active:after {
+        height: 3px;
+        @include transition(all .3s);
+      }
+      a[href^="#portfolio"] {
+        border: none;
+        background: transparent;
+        color: #464646;
+        font-weight: normal;
+        &:hover {
+          color: #a9a9a9;
+        }
+      }
+    }
+  } // /portfolio nabigation
+  .portfolio_content {
+    .pictures-grid_col {
+      padding-right: 0;
+      overflow: hidden;
+      .pictures-grid_img {
+        position: relative;
+        @include transition(all .3s);
+        &:not(:last-child) { margin-bottom: 10px; }
+        &:hover {
+          cursor: pointer;
+          .pictures-grid_hover-block {
+            opacity: 1;
+          }
+        }
+        .pictures-grid_hover-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 15% 40px 15%;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          background: rgba(0, 0, 0, .8);
+          color: #fff;
+          text-align: left;
+          @include transition(all .3s ease-in-out);
+          .hover-block_title {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 6px;
+            color: $active-color;
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 20px;
+              height: 2px;
+              background: $active-color;
+            }
+          }
+          .hover-block_description {
+            font-size: 12px;
+            color: #b2b3b3;
+          }
+          .hover-block_social .hover-block_social-btn {
+            margin-right: 7px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            background: #000;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            @include transition(all .3s);
+            &:hover {
+              @include scale(1.1);
+              background: $active-color;
+              color: #fff;
+            }
+            &:hover, &:focus { text-decoration: none; }
+          }
+        }
+      }
+    }
+  }
+  .portfolio_footer {
+    margin-top: 40px;
+    padding: 60px 0;
+    background: $active-color url("../images/portfolio-cta.jpg") no-repeat center;
+    @include bg-size(cover);
+    color: #fff;
+    button { margin-top: 15px; }
+  }
+}

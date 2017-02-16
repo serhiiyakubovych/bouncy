@@ -1,0 +1,38 @@
+.page_welcome {
+  .page_welcome_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: 8px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .to_bottom_arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    @include translate(-50%);
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    @include border-radius(50%);
+    background: $active-color;
+    text-align: center;
+    font-size: 18px;
+    @include transition(all .3s);
+    &:hover {
+      background: #fff;
+      color: $active-color;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.map {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  .map_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    @include transition(all .3s);
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+    .map_title_inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      color: #fff;
+      text-transform: uppercase;
+      .to_bottom_arrow {
+        display: inline-block;
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $active-color;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.team_quotes {
+  padding: 80px 0 100px;
+  background: #202020 url("../images/team_quotes.jpg") no-repeat center center;
+  @include bg-size(cover);
+  color: #b2b3b3;
+  .section_title {
+    color: #f3f3f3;
+  }
+  .author {
+    margin-top: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .desctop {
+    margin-top: -120px;
+  }
+}

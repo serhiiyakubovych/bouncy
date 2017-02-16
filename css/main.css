@@ -4,74 +4,6 @@
 /* MIXINS */
 /* TRANSFORM GROUP */
 /* OTHER */
-/* MIXINS */
-/* TRANSFORM GROUP */
-/* OTHER */
-@media screen and (max-width: 480px) {
-  .main_header .page_welcome .to_bottom_arrow {
-    bottom: 5%; } }
-@media screen and (max-width: 640px) {
-  .about {
-    text-align: center; } }
-@media screen and (max-width: 765px) {
-  .page_navigation {
-    position: relative;
-    padding: 10px 0 0;
-    z-index: 888;
-    background: #000; }
-    .page_navigation .company_name {
-      padding-left: 30px; }
-    .page_navigation .menu {
-      position: relative;
-      z-index: 999;
-      margin-top: 0;
-      background: darkorange;
-      text-align: center;
-      overflow: hidden; }
-      .page_navigation .menu li.active {
-        border: 0;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        background: #000; }
-      .page_navigation .menu li:hover:after {
-        display: none; }
-      .page_navigation .menu li:hover {
-        background: #000; }
-      .page_navigation .menu li a {
-        padding: 15px; }
-
-  .services {
-    overflow: hidden; }
-
-  .subscribe .subscribe_form .subscribe_email {
-    width: 100%; }
-  .subscribe .subscribe_form .btn[type="submit"] {
-    margin-top: 20px;
-    width: 100%; }
-
-  .testimonials .testimonials_slider_wrapper {
-    padding: 30px; }
-
-  .contact_us .contact_block {
-    margin-bottom: 50px; } }
-@media screen and (max-width: 1024px) {
-  .page_navigation .menu li:not(:last-child) {
-    margin-right: 0; }
-  .page_navigation .menu li a {
-    padding: 10px 15px; }
-
-  .featured_projects .featured_footer {
-    text-align: center; }
-    .featured_projects .featured_footer .btn {
-      margin-top: 10px; }
-
-  .portfolio .pictures-grid_img img {
-    width: 100%; }
-
-  .our_price .service {
-    margin-bottom: 20px;
-    width: 100%; } }
 /* COMMON */
 body {
   font: 16px/1.75 "Open Sans", sans-serif;
@@ -126,11 +58,11 @@ a {
 .col-without-padding {
   padding: 0; }
 
-.actions {
+.action-icons {
   margin-bottom: 60px;
   text-align: center;
   color: #fff; }
-  .actions .action {
+  .action-icons .action-icon {
     display: inline-block;
     width: 54px;
     height: 54px;
@@ -145,21 +77,21 @@ a {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
-    .actions .action:not(:last-child) {
+    .action-icons .action-icon:not(:last-child) {
       margin-right: 30px; }
-    .actions .action:hover {
+    .action-icons .action-icon:hover {
       background: #19bd9a;
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
       -ms-transform: scale(1.1);
       -o-transform: scale(1.1);
       transform: scale(1.1); }
-  .actions.service_actions {
+  .action-icons.service_action-icons {
     float: left;
     margin-bottom: 0;
     width: 65px;
     height: 100%; }
-    .actions.service_actions .action {
+    .action-icons.service_action-icons .action-icon {
       margin-top: 20px;
       margin-right: 0; }
 

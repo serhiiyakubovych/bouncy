@@ -1,0 +1,34 @@
+.section_header {
+  padding: 80px 0 60px;
+  text-align: center;
+  p {
+    font-size: 14px;
+  }
+}
+.section_title {
+  margin-bottom: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  color: $page-second-text-color;
+  letter-spacing: 7px;
+}
+.project_title {
+  @extend .section_title;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 888;
+  @include translate(-50%, -50%);
+  color: #fff;
+}
+.section_subtitle {
+  margin-bottom: 40px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.col-without-padding {
+  padding: 0;
+}

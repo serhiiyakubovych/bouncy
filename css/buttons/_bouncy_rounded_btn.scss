@@ -1,0 +1,16 @@
+.bouncy_rounded_btn {
+  padding: 7px 30px;
+  border: 1px solid #fff;
+  @include border-radius(25px);
+  background: transparent;
+  text-transform: capitalize;
+  color: #fff;
+  @include transition(all .25s ease-in-out);
+  &:hover {
+    background: #fff;
+    color: $page-second-text-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}

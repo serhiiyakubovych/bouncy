@@ -1,0 +1,11 @@
+.team_cta {
+  padding: 60px 0;
+  background: url('../images/team-cta.jpg') no-repeat center;
+  @include bg-size(cover);
+  text-align: center;
+  color: #fff;
+  p {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+}

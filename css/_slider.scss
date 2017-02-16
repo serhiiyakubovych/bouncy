@@ -1,0 +1,11 @@
+.slider_point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $active-color;
+  border-radius: 50%;
+  cursor: pointer;
+  &:not(:last-child) { margin-right: 10px; }
+}
+.slick-active > .slider_point { background: $active-color; }
+:not(.slick-active):hover > .slider_point { background: rgba(25, 189, 154, .2); }

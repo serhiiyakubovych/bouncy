@@ -1,0 +1,33 @@
+
+.action-icons {
+  margin-bottom: 60px;
+  text-align: center;
+  color: #fff;
+  .action-icon {
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    @include border-radius(50%);
+    background: $page-main-text-color;
+    font-size: 20px;
+    @include transition(all .3s);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      background: $active-color;
+      @include scale(1.1);
+    }
+  }
+  &.service_action-icons {
+    float: left;
+    margin-bottom: 0;
+    width: 65px;
+    height: 100%;
+    .action-icon {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+}

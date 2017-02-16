@@ -1,0 +1,12 @@
+.main_header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+                  rgba(0, 0, 0, .5),
+                  rgba(0, 0, 0, .5)
+  ),
+  url("../images/banner.jpg") center;
+  @include bg-size(cover);
+  color: #fff;
+}

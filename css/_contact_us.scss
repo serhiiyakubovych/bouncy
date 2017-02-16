@@ -1,0 +1,17 @@
+.contact_us {
+  padding-bottom: 100px;
+  background: #f3f3f3;
+  .contact_block {
+    min-height: 300px;
+    background: #fff;
+    @include box-shadow(1px 1px #e7e7e7);
+    text-align: center;
+    text-transform: uppercase;
+    .contact_img img { width: 100%; }
+    .contact_title {
+      margin-top: 30px;
+      color: #464646;
+    }
+    .contact_description { font-size: 14px; }
+  }
+}

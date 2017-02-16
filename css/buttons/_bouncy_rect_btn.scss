@@ -1,0 +1,14 @@
+.bouncy_rect_btn {
+  padding: 10px 0;
+  border-radius: 0;
+  background: $active-color;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  @include transition(all .3s);
+  &:hover {
+    box-shadow: 0 0 20px $active-color;
+    background: #fff;
+    color: $active-color;
+  }
+}

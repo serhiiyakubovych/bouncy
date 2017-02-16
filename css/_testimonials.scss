@@ -1,0 +1,21 @@
+.testimonials {
+  padding-bottom: 100px;
+  background: #f3f3f3;
+  .testimonials_slider_wrapper {
+    padding: 50px 100px;
+    background: #fff;
+    .testimonials_slider .testimonial_author {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      color: #464646;
+      .testimonial_author-name {
+        color: $active-color;
+        font-weight: 600;
+      }
+      .testimonial_author-position {
+        font-size: 14px;
+      }
+    }
+  }
+}

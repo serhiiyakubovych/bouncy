@@ -1,0 +1,54 @@
+.team {
+  padding-bottom: 100px;
+  overflow: hidden;
+  .team_slider {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    .team_slide {
+      display: inline-block;
+    }
+    .members_block {
+      position: relative;
+      text-align: right;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        right: -40px;
+        width: 5px;
+        height: 80%;
+        background: $active-color;
+      }
+      .member_name {
+        font-size: 20px;
+        color: #595959;
+      }
+      .member_position {
+        font-family: "Source Sans Pro", sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+    .about_member {
+      margin-top: 35px;
+      font-size: 14px;
+      text-align: right;
+    }
+    .member_skills .skill {
+      margin-top: 35px;
+      text-align: right;
+      .skill_name {
+        float: left;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .skill_progress {
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, $active-color, $active-color 80%, #e1e4e9 80.1%, #e1e4e9);
+      }
+    }
+  }
+}
