@@ -1,0 +1,96 @@
+@import 'mixins';
+
+@media screen and (max-width: 320px) {}
+@media screen and (max-width: 480px) {
+  .main_header .page_welcome .to_bottom_arrow {
+    bottom: 5%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .about {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .page_navigation {
+    position: relative;
+    padding: 10px 0 0;
+    z-index: 888;
+    background: #000;
+
+    .company_name {
+      padding-left: 30px;
+    }
+    .menu {
+      position: relative;
+      z-index: 999;
+      margin-top: 0;
+      background: darkorange;
+      text-align: center;
+      overflow: hidden;
+      li {
+        &.active {
+          border: 0;
+          @include border-radius(0);
+          background: #000;
+        }
+        &:hover:after { display: none; }
+        &:hover {
+          background: #000;
+        }
+        a {
+          padding: 15px;
+        } // /menu>li>a
+      } // /menu>li
+    } // /menu
+  } // /page-navigation
+  .services {
+    overflow: hidden;
+  }
+  .subscribe .subscribe_form {
+    .subscribe_email {
+      width: 100%;
+    }
+    .btn[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+  .testimonials .testimonials_slider_wrapper {
+    padding: 30px;
+  }
+  .contact_us {
+    .contact_block {
+      margin-bottom: 50px;
+    }
+  }
+} // /media: 768px
+
+@media screen and (max-width: 1024px) {
+  .page_navigation {
+    .menu {
+      li {
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        a {
+          padding: 10px 15px;
+        } // menu>li>a
+      } // menu>li
+    } // /menu
+  } // /page_navigation
+  .featured_projects .featured_footer {
+    text-align: center;
+    .btn {
+      margin-top: 10px;
+    }
+  }
+  .portfolio .pictures-grid_img img {
+    width: 100%;
+  }
+  .our_price .service {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+} // /media: 1024px

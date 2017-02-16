@@ -1,0 +1,70 @@
+/* MIXINS */
+/* TRANSFORM GROUP */
+/* OTHER */
+@media screen and (max-width: 480px) {
+  .main_header .page_welcome .to_bottom_arrow {
+    bottom: 5%; } }
+@media screen and (max-width: 640px) {
+  .about {
+    text-align: center; } }
+@media screen and (max-width: 765px) {
+  .page_navigation {
+    position: relative;
+    padding: 10px 0 0;
+    z-index: 888;
+    background: #000; }
+    .page_navigation .company_name {
+      padding-left: 30px; }
+    .page_navigation .menu {
+      position: relative;
+      z-index: 999;
+      margin-top: 0;
+      background: darkorange;
+      text-align: center;
+      overflow: hidden; }
+      .page_navigation .menu li.active {
+        border: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        background: #000; }
+      .page_navigation .menu li:hover:after {
+        display: none; }
+      .page_navigation .menu li:hover {
+        background: #000; }
+      .page_navigation .menu li a {
+        padding: 15px; }
+
+  .services {
+    overflow: hidden; }
+
+  .subscribe .subscribe_form .subscribe_email {
+    width: 100%; }
+  .subscribe .subscribe_form .btn[type="submit"] {
+    margin-top: 20px;
+    width: 100%; }
+
+  .testimonials .testimonials_slider_wrapper {
+    padding: 30px; }
+
+  .contact_us .contact_block {
+    margin-bottom: 50px; } }
+@media screen and (max-width: 1024px) {
+  .page_navigation .menu li:not(:last-child) {
+    margin-right: 0; }
+  .page_navigation .menu li a {
+    padding: 10px 15px; }
+
+  .featured_projects .featured_footer {
+    text-align: center; }
+    .featured_projects .featured_footer .btn {
+      margin-top: 10px; }
+
+  .portfolio .pictures-grid_img img {
+    width: 100%; }
+
+  .our_price .service {
+    margin-bottom: 20px;
+    width: 100%; } }
+
+/*# sourceMappingURL=media.css.map */

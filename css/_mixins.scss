@@ -1,0 +1,46 @@
+/* MIXINS */
+
+/* TRANSFORM GROUP */
+@mixin transform($transforms...) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+@mixin translate($pos...) {
+  @include transform(translate($pos));
+}
+@mixin scale($scale...) {
+  @include transform(scale($scale));
+}
+
+/* OTHER */
+@mixin bg-size($size...) {
+  -webkit-background-size: $size;
+  background-size: $size;
+}
+@mixin border-radius($percent) {
+  -webkit-border-radius: $percent;
+  -moz-border-radius: $percent;
+  border-radius: $percent;
+}
+@mixin transition($prop...) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -ms-transition: $prop;
+  -o-transition: $prop;
+  transition: $prop;
+}
+@mixin box-shadow($prop...) {
+  -webkit-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  box-shadow: $prop;
+}
+@mixin user-select($prop...) {
+  -webkit-user-select: $prop;
+  -khtml-user-select: $prop;
+  -moz-user-select: $prop;
+  -ms-user-select: $prop;
+  user-select: $prop;
+}

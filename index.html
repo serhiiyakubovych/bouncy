@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bouncy</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <header id="top" class="main_header">
+        <nav class="page_navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed custom_navbar_toggle" data-toggle="collapse" data-target="#page-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="glyphicon glyphicon-align-justify"></i>
+                    </button>
+                    <a class="company_name navbar-brand" href="#">Bouncy</a>
+                </div>
+                <div class="menu collapse navbar-collapse navbar-right" id="page-navbar-collapse">
+                    <ul class="nav navbar-nav ">
+                        <li class="active"><a href="#top" class="page_nav_anchor">Hello <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#about" class="page_nav_anchor">About</a></li>
+                        <li><a href="#services" class="page_nav_anchor">Services</a></li>
+                        <li><a href="#portfolio" class="page_nav_anchor">Portfolio</a></li>
+                        <li><a href="#team" class="page_nav_anchor">Team</a></li>
+                        <li><a href="#blog" class="page_nav_anchor">Blog</a></li>
+                        <li><a href="#contact" class="page_nav_anchor">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="page_welcome">
+            <div class="page_welcome_inner">
+                <h1>Lorem ipsum dolor sit</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, sint?</p>
+            </div>
+            <div class="to_bottom_arrow">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="description col-md-5 col-md-offset-2">
+                    <h2 class="section_title">This is bouncy</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, officiis, quod. Ab, ad aut
+                        consectetur consequatur culpa cum dolore dolorum ea enim facilis fugit impedit ipsa ipsum
+                        laborum, maiores molestias nihil nobis optio qui quibusdam quidem sunt vel veritatis vitae.</p>
+                    <button class="btn bouncy_rounded_btn bouncy_btn_black">Read more</button>
+                </div>
+                <div class="ipad_block col-md-2 col-md-offset-1 hidden-xs hidden-sm">
+                    <img src="images/ipad.png" alt="iPad" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="container">
+            <header class="section_header">
+                <h2 class="section_title">Details about bouncy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+            </header>
+            <div class="actions">
+                <div class="action"><i class="fa fa-heart"></i></div>
+                <div class="action"><i class="fa fa-home"></i></div>
+                <div class="action"><i class="fa fa-lightbulb-o"></i></div>
+            </div>
+            <div class="description row">
+                <div class="col-md-offset-1">
+                    <div class="col-md-12">
+                        <h3 class="section_subtitle">Creative ideas</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="#">Lorem</a> ipsum <strong>dolor sit</strong> amet, consectetur adipisicing elit. Animi autem deleniti distinctio eaque fugit
+                            illum inventore minus sed sequi veniam.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit. Ipsum magni omnis possimus qui! Asperiores
+                        est id nam vero. Consequatur cumque eaque eius explicabo modi natus nemo nostrum, porro quis sequi
+                        sint totam unde voluptate? Assumenda <strong>debitis</strong> ducimus eligendi, est ex libero necessitatibus neque
+                        nulla, odio officia pariatur placeat qui sed?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured_projects">
+        <header class="section_header">
+            <h2 class="section_title">Featured projects</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="container_fluid clearfix">
+            <div class="projects">
+                <div class="col-md-6 col-without-padding">
+                    <div class="project">
+                        <img src="images/project-1.jpg" alt="Project" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-md-3 col-without-padding visible-md visible-lg">
+                    <div class="project">
+                        <div class="visible_project">
+                            <h3 class="project_title">Vintage</h3>
+                            <img src="images/project-2-visible.jpg" alt="Project" class="img-responsive">
+                        </div>
+                        <div class="hidden_project">
+                            <img src="images/project-2-hidden.jpg" alt="Project" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-without-padding visible-md visible-lg">
+                    <div class="project">
+                        <div class="visible_project">
+                            <h3 class="project_title">Branding</h3>
+                            <img src="images/project-3-visible.jpg" alt="Project" class="img-responsive">
+                        </div>
+                        <div class="hidden_project">
+                            <img src="images/project-3-hidden.jpg" alt="Project" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="featured_footer">
+            <div class="container">
+                <div class="col-md-8 col-md-offset-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, velit!</p>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <button class="btn bouncy_rounded_btn">Submit now</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <section id="services" class="services">
+        <header class="section_header">
+            <h2 class="section_title">Our services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="service_description container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1 row">
+                    <div class="col-md-1 visible-md visible-lg">
+                        <div class="actions service_actions">
+                            <div class="action"><i class="fa fa-heart"></i></div>
+                            <div class="action"><i class="fa fa-home"></i></div>
+                            <div class="action"><i class="fa fa-lightbulb-o"></i></div>
+                            <div class="action"><i class="fa fa-lightbulb-o"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-md-offset-2">
+                        <h3 class="section_subtitle">Graphic Design</h3>
+                        <p>Lorem <strong>ipsum</strong> dolor  adipisicing elit. Debitis excepturi hic labore nihil
+                            optio, possimus. Lorem. Lorem ipsum.</p>
+                        <p>Amet atque autem Lorem. deserunt <a href="#">dolorem</a> est, maiores minus modi non perspiciatis porro, quia quis
+                            vel.</p>
+                    </div>
+                </div>
+                <div class="graphic col-md-4 col-md-offset-1 visible-md visible-lg">
+                    <img src="images/skills.png" alt="Sevices statistic" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team_quotes">
+        <div class="container">
+            <div class="col-md-6">
+                <h2 class="section_title">Impressed ?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor id necessitatibus,
+                    neque nostrum perspiciatis quis recusandae rerum sit unde!
+                </p>
+                <p class="author">- <strong>Abdullah Nomad</strong> <br>
+                    <span>Creative director, <a href="#">Code cafe</a></span>
+                </p>
+            </div>
+            <div class="col-md-5 col-md-offset-1 visible-md visible-lg">
+                <img src="images/computer.png" alt="Bouncy desctop" class="desctop img-responsive">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <header class="section_header">
+            <h2 class="section_title">The portfolio</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="container">
+            <ul class="portfolio_navigation nav nav-tabs">
+                <li class="active"><a href="#portfolio_works" data-toggle="tab">All works</a></li>
+                <li><a href="#portfolio_print" data-toggle="tab">Print</a></li>
+                <li><a href="#portfolio_identity" data-toggle="tab">Identity</a></li>
+                <li><a href="#portfolio_branding" data-toggle="tab">Branding</a></li>
+                <li><a href="#portfolio_web" data-toggle="tab">Web</a></li>
+                <li><a href="#portfolio_html" data-toggle="tab">HTML</a></li>
+                <li><a href="#portfolio_wordpress" data-toggle="tab">Wordpress</a></li>
+                <li class="visible-xs visible-sm" data-toggle="collapse" data-target="#portfolio_content">Hide</li>
+            </ul>
+
+            <div class="portfolio_content tab-content clearfix" id="portfolio_content">
+                <div class="tab-pane active" id="portfolio_works">
+                    <div class="pictures-grid_col col-sm-6 col-md-3">
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-1-1.jpg" alt="Portfolio" class="img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-1-2.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-1-3.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pictures-grid_col col-sm-6 col-md-3">
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-2-1.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Acpellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-2-2.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-2-3.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix visible-sm-block"></div>
+                    <div class="pictures-grid_col col-sm-6 col-md-3">
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-3-1.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-3-2.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-3-3.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pictures-grid_col col-sm-6 col-md-3">
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-4-1.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-4-2.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictures-grid_img">
+                            <img src="images/portfolio-4-3.jpg" alt="Portfolio" class="pictures-grid_img img-responsive">
+                            <div class="pictures-grid_hover-block">
+                                <h3 class="hover-block_title">Title here</h3>
+                                <p class="hover-block_description">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Accusantium nihil repellendus veritatis.</p>
+                                <div class="hover-block_social">
+                                    <a href="#" class="hover-block_social-btn fa fa-link"></a>
+                                    <a href="#" class="hover-block_social-btn fa fa-heart-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="portfolio_print">...</div>
+                <div class="tab-pane" id="portfolio_identity">...</div>
+                <div class="tab-pane" id="portfolio_branding">...</div>
+                <div class="tab-pane" id="portfolio_web">...</div>
+                <div class="tab-pane" id="portfolio_html">...</div>
+                <div class="tab-pane" id="portfolio_wordpress">...</div>
+            </div>
+
+            <footer class="portfolio_footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, natus?</p>
+                <button class="btn bouncy_rounded_btn">Submit now</button>
+            </footer>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <header class="section_header">
+            <h2 class="section_title">The team</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="team_slider container">
+            <div class="team_slide row">
+                <div class="col-md-4 col-md-offset-1">
+                    <img src="images/member-1.jpg" alt="Author" class="img-responsive">
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="members_block">
+                        <span class="member_name">Abdullah Noman</span><br>
+                        <span class="member_position">Creative director, code cafe</span>
+                    </div>
+                    <p class="about_member">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi quod tenetur.</p>
+                    <div class="member_skills">
+                        <div class="skill">
+                            <span class="skill_name">Branding</span>
+                            <span class="skill_grade">80%</span>
+                            <div class="skill_progress" data-progress="80"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">Web design</span>
+                            <span class="skill_grade">65%</span>
+                            <div class="skill_progress" data-progress="65"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">User interface</span>
+                            <span class="skill_grade">75%</span>
+                            <div class="skill_progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team_slide row">
+                <div class="col-md-4 col-md-offset-1">
+                    <img src="images/member-2.jpg" alt="Author" class="img-responsive">
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="members_block">
+                        <span class="member_name">Malcolm Task</span><br>
+                        <span class="member_position">Founder</span>
+                    </div>
+                    <p class="about_member">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi quod tenetur.</p>
+                    <div class="member_skills">
+                        <div class="skill">
+                            <span class="skill_name">Branding</span>
+                            <span class="skill_grade">95%</span>
+                            <div class="skill_progress" data-progress="95"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">Web design</span>
+                            <span class="skill_grade">85%</span>
+                            <div class="skill_progress" data-progress="85"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">User interface</span>
+                            <span class="skill_grade">90%</span>
+                            <div class="skill_progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team_slide row">
+                <div class="col-md-4 col-md-offset-1">
+                    <img src="images/member-3.jpg" alt="Author" class="img-responsive">
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="members_block">
+                        <span class="member_name">Jennifer Doe</span><br>
+                        <span class="member_position">Project Manager</span>
+                    </div>
+                    <p class="about_member">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi quod tenetur.</p>
+                    <div class="member_skills">
+                        <div class="skill">
+                            <span class="skill_name">Branding</span>
+                            <span class="skill_grade">100%</span>
+                            <div class="skill_progress" data-progress="100"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">Web design</span>
+                            <span class="skill_grade">99%</span>
+                            <div class="skill_progress" data-progress="99"></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill_name">User interface</span>
+                            <span class="skill_grade">45%</span>
+                            <div class="skill_progress" data-progress="45"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team_cta">
+        <div class="container-fluid">
+            <p>Already Loved Us? Let’s talk!</p>
+            <button class="btn bouncy_rounded_btn">Submit now</button>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <header class="section_header">
+            <h2 class="section_title">Testimonials</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="container testimonials_slider_wrapper">
+            <div class="testimonials_slider">
+                <div class="testimonial">
+                    <div class="col-md-3">
+                        <img src="images/testimonial-1.png" alt="Testimonial" class="testimonial_author-photo">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus, dicta, dolores
+                            ducimus eaque excepturi fugiat ipsa nemo non officiis perferendis porro quibusdam ratione rerum
+                            sit sunt temporibus totam vel.</p>
+                        <p class="testimonial_author">
+                            <span class="testimonial_author-name">Partho</span><br>
+                            <span class="testimonial_author-position">Founder, Artways BD</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="col-md-3">
+                        <img src="images/testimonial-2.png" alt="Testimonial" class="testimonial_author-photo">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus, dicta, dolores
+                            ducimus eaque excepturi efg lorem ipsum dolor sit amet fugiat ipsa nemo non officiis perferendis porro quibusdam ratione rerum
+                            sit sunt temporibus totam vel.</p>
+                        <p class="testimonial_author">
+                            <span class="testimonial_author-name">Ruth</span><br>
+                            <span class="testimonial_author-position">Co-Founder, Some Corp.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="col-md-3">
+                        <img src="images/testimonial-3.png" alt="Testimonial" class="testimonial_author-photo">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus, dicta, dolores
+                            ducimus eaque non officiis perferendis porro quibusdam ratione rerum
+                            sit sunt temporibus totam vel.</p>
+                        <p class="testimonial_author">
+                            <span class="testimonial_author-name">Devis</span><br>
+                            <span class="testimonial_author-position">CEO, Else Inc.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="latest_news visible-md visible-lg">
+        <div class="container">
+            <div class="news_slider">
+                <div class="new col-md-8">
+                    <header class="section_header">
+                        <h2 class="section_title">Latest news</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+                    </header>
+                    <div class="new-inner">
+                        <h3 class="new_title">The trending Landing Pages</h3>
+                        <p class="new_author">by <a href="#">Kabir Uddin</a></p>
+                        <p class="new_stats">6950 Likes - 243 Comments - 703 shares</p>
+                        <p class="new_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+                            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio... </p>
+                        <p class="new_read-more"><a href="#">+ Read More</a></p>
+                    </div>
+                </div>
+                <div class="new col-md-8">
+                    <header class="section_header">
+                        <h2 class="section_title">Latest videos</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+                    </header>
+                    <div class="new-inner">
+                        <video class="new_video" poster="images/video-play.png">
+                            <source src="video/movie.mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="new col-md-8">
+                    <header class="section_header">
+                        <h2 class="section_title">Latest news</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+                    </header>
+                    <div class="new-inner">
+                        <h3 class="new_title">The trending Landing Pages</h3>
+                        <p class="new_author">by <a href="#">Kabir Uddin</a></p>
+                        <p class="new_stats">6950 Likes - 243 Comments - 703 shares</p>
+                        <p class="new_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+                            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio... </p>
+                        <p class="new_read-more"><a href="#">+ Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our_price">
+        <header class="section_header">
+            <h2 class="section_title">Our price</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="container">
+            <div class="col-md-2 col-md-offset-2">
+                <div class="service">
+                    <div class="service_head">Premium</div>
+                    <p class="service_price">$ 60</p>
+                    <p class="service_duration">Per Month</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <div class="service">
+                    <ul class="service_list">
+                        <li>Full Branding</li>
+                        <li>Project Management</li>
+                        <li>Unlimited Revisions</li>
+                        <li>24/7 h Service</li>
+                        <li>Free Domain</li>
+                        <li>Free Hosting</li>
+                    </ul>
+                    <div class="service_footer"><a href="#">Let's start ></a></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <div class="service">
+                    <div class="service_head">Exclusive</div>
+                    <p class="service_price">$ 80</p>
+                    <p class="service_duration">Per Month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <header class="section_header">
+            <h2 class="section_title">Subscribe us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <form action="#" class="subscribe_form form-inline">
+            <input type="email" placeholder="Email Address" class="subscribe_email form-control">
+            <button type="submit" class="btn bouncy_rect_btn">Submit</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact_us clearfix">
+        <header class="section_header">
+            <h2 class="section_title">Contact us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, magni.</p>
+        </header>
+        <div class="col-md-3 col-md-offset-2">
+            <div class="contact_block">
+                <div class="contact_img">
+                    <img src="images/contact-us-1.jpg" alt="Contact">
+                </div>
+                <p class="contact_title">Email</p>
+                <p class="contact_description">hello@codecafe.com<br>
+                    Personal@codecafe.com</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="contact_block">
+                <div class="contact_img">
+                    <img src="images/contact-us-2.jpg" alt="Contact">
+                </div>
+                <p class="contact_title">Our office</p>
+                <p class="contact_description">240 Bhatikhana, 8200 Barisal<br>
+                    Bangladesh</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="contact_block">
+                <div class="contact_img">
+                    <img src="images/contact-us-3.jpg" alt="Contact">
+                </div>
+                <p class="contact_title">Phone</p>
+                <p class="contact_description">+00 11 66 99 66 44<br>
+                    11 99 66 44 065</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="message container">
+        <div class="col-md-10 col-md-offset-1">
+            <form action="#" class="form-inline">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="user-name" class="sr-only">Name</label>
+                        <input type="text" id="user-name" name="user-name" placeholder="Your name">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="message__user-email" class="sr-only">Email</label>
+                        <input type="email" id="message__user-email" name="message__user-email" placeholder="Email address">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="subject" class="sr-only">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="message__text" class="sr-only">Message</label>
+                        <textarea id="message__text" name="message"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block bouncy_rect_btn">Submit now</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map">
+        <div id="map"></div>
+        <div class="map_title">
+            <div class="map_title_inner">
+                <span>Find us on the map</span>
+                <span class="to_bottom_arrow">
+                    <i class="fa fa-angle-down"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page_footer">
+        <div class="footer_info">
+            <p class="company_name"><a href="/">Bouncy</a></p>
+            <p class="copyright">Copyright 2015. All rights Reserved</p>
+            <ul class="social_list">
+                <li class="social_anchor fb">
+                    <a href="#"><i class=" fa fa-facebook"></i></a>
+                </li>
+                <li class="social_anchor tw">
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social_anchor linkedin">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li class="social_anchor instagram">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li class="social_anchor vimeo">
+                    <a href="#"><i class="fa fa-vimeo"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="libs/jquery/jquery-3.1.1.js"></script> <!-- jQuery -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script> <!-- Slick (jQuery Plugin: carousel) -->
+    <script src="js/common.js"></script> <!-- Site's script -->
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTmMtn8L2UFW59irzZMltAcw1w6FU_ZSg&callback=Bouncy.initMap">
+    </script> <!-- Google Maps API -->
+</body>
+</html>
