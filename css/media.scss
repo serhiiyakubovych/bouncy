@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
   .page_navigation {
     position: relative;
     padding: 10px 0 0;
@@ -77,7 +77,7 @@
           margin-right: 0;
         }
         a {
-          padding: 10px 15px;
+          padding: 10px 12px;
         } // menu>li>a
       } // menu>li
     } // /menu
@@ -95,4 +95,5 @@
     margin-bottom: 20px;
     width: 100%;
   }
+  .message {}
 } // /media: 1024px

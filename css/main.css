@@ -491,7 +491,7 @@ a {
   .portfolio .portfolio_footer {
     margin-top: 40px;
     padding: 60px 0;
-    background: #19bd9a url("../images/portfolio-cta.jpg") no-repeat center;
+    background: #19bd9a url("../images/portfolio/portfolio-cta.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff; }

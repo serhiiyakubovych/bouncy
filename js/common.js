@@ -8,7 +8,8 @@
      * @constructor
      */
     function Bouncy(options = {}) {
-        let BOUNCY_MENU = options.menuElem || $(".page_navigation");
+        const BOUNCY_MENU = options.menuElem || $(".page_navigation"),
+            AJAX_LOADER = options.ajaxLoader || $(new Image()).attr("src", "/images/ajax-loader.gif");
 
         /**
          * The main method (add handlers, call work functions etc.)
@@ -19,10 +20,12 @@
             * <!-- EVENTS
             * */
 
+            // Toggle fixed / static state of nav. menu
             $(document).on("scroll", {
                 menuElem: BOUNCY_MENU
             }, togglePosStateOfNavMenu);
 
+            // Scroll-spy
             $(document).on("scroll", {
                 menuElem: BOUNCY_MENU
             }, checkCurrPagePosForNavMenu);
@@ -37,14 +40,17 @@
             // Toggle video state
             $(document).on("click", "video", toggleVideo);
 
+            // AJAX request to the server for new data in the portfolio section
+            // 'shown.bs.tab' is a Bootstrap event
+            $('a[data-toggle="tab"]').on('shown.bs.tab', showPortfolioWorks);
+
             /*
             * EVENTS END -->
             * */
 
             let BAR_START_COLOR = "#19bd9a";
             let BAR_END_COLOR = "#e1e4e9";
-            setGradientForProgressBars( $(".skill_progress"),
-                BAR_START_COLOR, BAR_END_COLOR );
+            setGradientForProgressBars( $(".skill_progress"), BAR_START_COLOR, BAR_END_COLOR );
 
             // Add sliders to the page using the jQuery plugin named "Slick"
             let bouncyHorizontalSlidersOptions = {
@@ -150,6 +156,19 @@
             });
 
             window.history.pushState({}, "", newPath);
+        }
+
+        /**
+         * AJAX Request of works after tab changing in the 'portfolio' section
+         *
+         * @param {object} event
+         */
+        function showPortfolioWorks(event) {
+            let tab = event.target,
+                tabPaneHref = $(tab).attr("href"),
+                tabPane = $(tabPaneHref);
+            $(tabPane).append(AJAX_LOADER);
+            $(tabPane).load(`content/portfolio.html ${tabPaneHref} > *`);
         }
 
         /**

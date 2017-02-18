@@ -7,7 +7,7 @@
 @media screen and (max-width: 640px) {
   .about {
     text-align: center; } }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
   .page_navigation {
     position: relative;
     padding: 10px 0 0;
@@ -53,7 +53,7 @@
   .page_navigation .menu li:not(:last-child) {
     margin-right: 0; }
   .page_navigation .menu li a {
-    padding: 10px 15px; }
+    padding: 10px 12px; }
 
   .featured_projects .featured_footer {
     text-align: center; }
