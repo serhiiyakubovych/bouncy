@@ -8,7 +8,7 @@
     }
     .graphic {
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
       @include translate(0, -50%);
     }

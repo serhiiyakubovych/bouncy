@@ -58,6 +58,12 @@ a {
 .col-without-padding {
   padding: 0; }
 
+.anim-post-hidden {
+  opacity: 0; }
+
+.anim-post-visible {
+  opacity: 1; }
+
 .action-icons {
   margin-bottom: 60px;
   text-align: center;
@@ -353,7 +359,7 @@ a {
       margin-top: 40px; }
     .services .service_description .graphic {
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
       -webkit-transform: translate(0, -50%);
       -moz-transform: translate(0, -50%);

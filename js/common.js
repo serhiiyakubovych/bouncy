@@ -71,6 +71,29 @@
             $(".testimonials_slider").slick(bouncyHorizontalSlidersOptions);
             $(".news_slider").slick(bouncyVerticalSlidersOptions);
 
+            // Just-add-water CSS animations
+            let animPostCommonOptions = {
+                    classToAddForFullView: 'full-visible',
+                    offset: 150
+                };
+            $('.anim-post.bounce-in-left').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated bounceInLeft'
+            }, animPostCommonOptions));
+            $('.anim-post.bounce-in-right').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated bounceInRight'
+            }, animPostCommonOptions));
+            $('.anim-post.bounce-in-down').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated bounceInDown'
+            }, animPostCommonOptions));
+            $('.anim-post.bounce-in-up').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated bounceInUp'
+            }, animPostCommonOptions));
+            $('.anim-post.zoom-in').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated zoomIn'
+            }, animPostCommonOptions));
+            $('.anim-post.rotate-in').addClass("anim-post-hidden").viewportChecker($.extend({
+                classToAdd: 'anim-post-visible animated rotateIn'
+            }, animPostCommonOptions));
         }
 
         /**
