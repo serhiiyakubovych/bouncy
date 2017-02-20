@@ -8,8 +8,13 @@
      * @constructor
      */
     function Bouncy(options = {}) {
-        const BOUNCY_MENU = options.menuElem || $(".page_navigation"),
-            AJAX_LOADER = options.ajaxLoader || $(new Image()).attr("src", "/images/ajax-loader.gif");
+        if (typeof Bouncy.instance === "object") {
+            return Bouncy.instance;
+        }
+        Bouncy.instance = this;
+
+        const BOUNCY_MENU = (options.menuElem) ? options.menuElem : $(".page_navigation"),
+            AJAX_LOADER = (options.ajaxLoader) ? options.ajaxLoader : $(new Image()).attr("src", "/images/ajax-loader.gif");
 
         /**
          * The main method (add handlers, call work functions etc.)
@@ -78,25 +83,14 @@
             let animPostCommonOptions = {
                     classToAddForFullView: 'full-visible',
                     offset: 150
-                };
-            $('.anim-post.bounce-in-left').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated bounceInLeft'
-            }, animPostCommonOptions));
-            $('.anim-post.bounce-in-right').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated bounceInRight'
-            }, animPostCommonOptions));
-            $('.anim-post.bounce-in-down').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated bounceInDown'
-            }, animPostCommonOptions));
-            $('.anim-post.bounce-in-up').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated bounceInUp'
-            }, animPostCommonOptions));
-            $('.anim-post.zoom-in').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated zoomIn'
-            }, animPostCommonOptions));
-            $('.anim-post.rotate-in').addClass("anim-post-hidden").viewportChecker($.extend({
-                classToAdd: 'anim-post-visible animated rotateIn'
-            }, animPostCommonOptions));
+                },
+                animClasses = ["bounce-in-left", "bounce-in-right", "bounce-in-down", "bounce-in-up",
+                    "zoom-in", "rotate-in"];
+            animClasses.forEach((animClass) => {
+                $(`.anim-post.${animClass}`).addClass("anim-post-hidden").viewportChecker($.extend({
+                    classToAdd: `anim-post-visible animated ${ camalize(animClass) }`
+                }, animPostCommonOptions));
+            });
         }
 
         /**
@@ -185,7 +179,7 @@
         }
 
         /**
-         * AJAX Request of works after tab changing in the 'portfolio' section
+         * An AJAX Request of works after a tab changing in the the 'portfolio' section
          *
          * @param {object} event
          */
@@ -198,14 +192,18 @@
         }
 
         /**
-         * Show modal window with data about portfolio work
+         * Show a modal window with data about a portfolio work using AJAX request to a server
          *
          * @param {object} event
          */
         function getPortfolioWorkDetails(event) {
-            let portfolioModal = $("#porfolioModal"),
+            let pictureBlock = $(this),
+                portfolioModal = $("#porfolioModal"),
                 portfolioModalTitle = $(portfolioModal).find(".modal-title"),
-                portfolioModalTitleBody = $(portfolioModal).find(".modal-body");
+                portfolioModalTitleBody = $(portfolioModal).find(".modal-body"),
+                jsonURI = $(pictureBlock).data("resource") || "portfolio_details";
+
+            jsonURI = "content/" + jsonURI + ".json";
 
             $(portfolioModalTitle).text("Load...");
             $(portfolioModalTitleBody).append(AJAX_LOADER);
@@ -213,12 +211,12 @@
             $(portfolioModal).modal('show');
             $(portfolioModal).focus();
 
-            $.getJSON( "content/portfolio_details.json", () => {
+            $.getJSON( jsonURI, () => {
                 $(AJAX_LOADER).remove();
             })
-                .done(( data ) => {
-                    $(portfolioModalTitle).text(data.title);
-                    $(portfolioModalTitleBody).text(data.description);
+                .done(( response ) => {
+                    $(portfolioModalTitle).text(response.title);
+                    $(portfolioModalTitleBody).text(response.description);
                 })
                 .fail(() => {
                     $(portfolioModalTitle).text("Error");
@@ -290,6 +288,21 @@
         });
     };
     window.Bouncy = Bouncy;
+
+    /**
+     * Converting string into camel case (from "example-str" to "exampleStr")
+     *
+     * @param {string} originStr
+     * @returns {string}
+     */
+    function camalize(originStr = "") {
+        let wordsInOriginStr = originStr.split("-");
+        for (let i = 1; i < wordsInOriginStr.length; i++) {
+            let word = wordsInOriginStr[i];
+            wordsInOriginStr[i] = word[0].toUpperCase() + word.slice(1);
+        }
+        return wordsInOriginStr.join("");
+    }
 
     $(document).ready(() => {
         let page = new Bouncy();
