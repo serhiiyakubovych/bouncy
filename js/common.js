@@ -42,7 +42,10 @@
 
             // AJAX request to the server for new data in the portfolio section
             // 'shown.bs.tab' is a Bootstrap event
-            $('a[data-toggle="tab"]').on('shown.bs.tab', showPortfolioWorks);
+            $('a[data-toggle="tab"]').on("shown.bs.tab", showPortfolioWorks);
+
+            // Show modal window after clicking on a portfolio work
+            $(document).on("click", ".pictures-grid_hover-block", getPortfolioWorkDetails);
 
             /*
             * EVENTS END -->
@@ -192,6 +195,35 @@
                 tabPane = $(tabPaneHref);
             $(tabPane).append(AJAX_LOADER);
             $(tabPane).load(`content/portfolio.html ${tabPaneHref} > *`);
+        }
+
+        /**
+         * Show modal window with data about portfolio work
+         *
+         * @param {object} event
+         */
+        function getPortfolioWorkDetails(event) {
+            let portfolioModal = $("#porfolioModal"),
+                portfolioModalTitle = $(portfolioModal).find(".modal-title"),
+                portfolioModalTitleBody = $(portfolioModal).find(".modal-body");
+
+            $(portfolioModalTitle).text("Load...");
+            $(portfolioModalTitleBody).append(AJAX_LOADER);
+
+            $(portfolioModal).modal('show');
+            $(portfolioModal).focus();
+
+            $.getJSON( "content/portfolio_details.json", () => {
+                $(AJAX_LOADER).remove();
+            })
+                .done(( data ) => {
+                    $(portfolioModalTitle).text(data.title);
+                    $(portfolioModalTitleBody).text(data.description);
+                })
+                .fail(() => {
+                    $(portfolioModalTitle).text("Error");
+                    $(portfolioModalTitleBody).text("Can't get the details.");
+                });
         }
 
         /**
